@@ -27,6 +27,7 @@ export const StyledSlider = styled.div`
         border-radius: 0px;
         padding: 14px;
         cursor: pointer;
+        border: 1px solid #d1d1d3;
       }
     }
     .window {
@@ -46,14 +47,44 @@ export const StyledSlider = styled.div`
     }
   }
   .item {
-    /* flex-grow: 1; */
-    /* text-align: center; */
-    /* border: 5px solid black; */
     font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     user-select: none;
+
+    .info {
+      /* border: 3px solid black; */
+      * {
+        /* border: 1px solid black; */
+      }
+      height: 340px;
+      width: 570px;
+      margin-left: 100px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      h1 {
+        font-size: 48px;
+        line-height: 58px;
+      }
+      p {
+        font-size: 19px;
+        /* word-wrap: break-word;
+        white-space: normal; */
+        font-weight: 400;
+        line-height: 140%;
+        color: #454950;
+      }
+      button {
+        padding: 12px 24px;
+        border: none;
+        background: #fcec41;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
   }
   .item-1 {
     background: url("slider/slider_1.jpg");
