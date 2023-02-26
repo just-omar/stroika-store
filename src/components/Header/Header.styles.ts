@@ -7,4 +7,7 @@ export const StyledHeader = styled.header`
   .special_img {
     margin: 0 -100px;
   }
+  button {
+    cursor: pointer;
+  }
 `;

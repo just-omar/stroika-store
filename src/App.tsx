@@ -6,9 +6,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Container>
-        <img className="special_img" src={special} alt="" />
-      </Container> */}
     </div>
   );
 }
