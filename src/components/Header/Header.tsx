@@ -12,14 +12,33 @@ const Header = (props: Props) => {
     <StyledHeader>
       <Navbar />
       <Container>
-        <div className="slider">
-          <Slider>
-            <div className="item item-1">item 1</div>
-            <div className="item item-2">item 2</div>
-            <div className="item item-3">item 3</div>
-          </Slider>
-          {/* <img className="special_img" src={special} alt="" /> */}
-        </div>
+        <Slider>
+          <div className="item item-1">
+            <div className="info">
+              <h1>Специальные предложения</h1>
+              <p>
+                на строительные материалы
+                <br /> и товары для ремонта
+              </p>
+              <button>
+                <span>Подробнее</span>
+              </button>
+            </div>
+          </div>
+          <div className="item item-2">
+            <div className="info">
+              <h1>Распродажа инструментов</h1>
+              <p>
+                «СтройкаСтор» стремится сделать условия покупки максимально
+                выгодными для каждого покупателя, поэтому на сайте регулярно
+                появляются товары со скидкой
+              </p>
+              <button>
+                <span>Подробнее</span>
+              </button>
+            </div>
+          </div>
+        </Slider>
       </Container>
     </StyledHeader>
   );
