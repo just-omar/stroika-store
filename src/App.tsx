@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import Card from "./components/Card/Card";
+import StockCard from "./components/Card/StockCard";
 
 import Slider from "./components/Slider/Slider";
 import { Container } from "./GlobalStyle";
@@ -10,7 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   const cards = stockCardData.map(
     ({ discount, image, info, price, lineThroughPrice }) => (
-      <Card
+      <StockCard
         discount={discount}
         image={image}
         info={info}
@@ -58,7 +57,7 @@ function App() {
               <h2>Акции</h2>
               <button>
                 <span>Все акции</span>
-                <img src="stock/right_arrow.svg" alt="" />
+                <img src="main-page/stock/right_arrow.svg" alt="" />
               </button>
             </div>
             <div className="stock__bottom">{cards}</div>
@@ -66,6 +65,7 @@ function App() {
           <section className="popular-categories"></section>
           <section className="popular-products"></section>
           <section className="popular-brands"></section>
+          <section className="reviews"></section>
         </StyledMain>
       </Container>
     </div>

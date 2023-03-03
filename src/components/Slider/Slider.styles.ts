@@ -87,10 +87,10 @@ export const StyledSlider = styled.div`
     }
   }
   .item-1 {
-    background: url("slider/slider_1.jpg");
+    background: url("main-page/slider/slider_1.jpg");
   }
   .item-2 {
-    background: url("slider/slider_2.jpg");
+    background: url("main-page/slider/slider_2.jpg");
   }
   .item-3 {
     background-color: green;

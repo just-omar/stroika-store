@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const StyledCard = styled.div`
+export const StyledStockCard = styled.div`
   display: flex;
   width: 572px;
   border: 1px solid #e8e9ea;
@@ -64,35 +63,3 @@ const StyledCard = styled.div`
     }
   }
 `;
-
-type Props = {
-  discount: number;
-  image: string;
-  info: string;
-  price: number;
-  lineThroughPrice: number;
-};
-
-const Card = ({ discount, image, info, price, lineThroughPrice }: Props) => {
-  return (
-    <StyledCard>
-      <div className="left">
-        <div className="discount">
-          <span>{`-${discount}%`}</span>
-        </div>
-        <img src={`stock/${image}`} alt="image" />
-      </div>
-      <div className="right">
-        <p className="info">{info}</p>
-        <p className="price">
-          {price} ₽ <span>{lineThroughPrice} ₽</span>
-        </p>
-        <button>
-          <span>В корзину</span>
-        </button>
-      </div>
-    </StyledCard>
-  );
-};
-
-export default Card;
