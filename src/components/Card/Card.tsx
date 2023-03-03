@@ -65,23 +65,27 @@ const StyledCard = styled.div`
   }
 `;
 
-type Props = {};
+type Props = {
+  discount: number;
+  image: string;
+  info: string;
+  price: number;
+  lineThroughPrice: number;
+};
 
-const Card = (props: Props) => {
+const Card = ({ discount, image, info, price, lineThroughPrice }: Props) => {
   return (
     <StyledCard>
       <div className="left">
         <div className="discount">
-          <span>-25%</span>
+          <span>{`-${discount}%`}</span>
         </div>
-        <img src="stock/Image_1.png" alt="" />
+        <img src={`stock/${image}`} alt="image" />
       </div>
       <div className="right">
-        <p className="info">
-          Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)
-        </p>
+        <p className="info">{info}</p>
         <p className="price">
-          449 ₽ <span>499 ₽</span>
+          {price} ₽ <span>{lineThroughPrice} ₽</span>
         </p>
         <button>
           <span>В корзину</span>

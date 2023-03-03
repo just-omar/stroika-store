@@ -1,99 +1,29 @@
 import styled from "styled-components";
 import Card from "./components/Card/Card";
-import Header from "./components/Header/Header";
+
 import Slider from "./components/Slider/Slider";
 import { Container } from "./GlobalStyle";
-
-const StyledMain = styled.main`
-  * {
-    /* border: 1px solid black; */
-  }
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-  gap: 80px;
-  .stock {
-    /* height: 496px; */
-    /* border: 1px solid black; */
-
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      padding: 16px 0;
-      /* border: 1px solid black; */
-
-      h2 {
-        font-size: 34px;
-        line-height: 44.2px;
-      }
-      button {
-        background: #ffffff;
-        border: 1px solid #d1d1d3;
-        padding: 12px 16px 12px 24px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        span {
-          font-size: 18px;
-          color: #171b24;
-        }
-      }
-    }
-    &__bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-  }
-  .popular-categories {
-    height: 440px;
-  }
-  .popular-products {
-    height: 1344px;
-  }
-  .popular-brands {
-    height: 328px;
-  }
-`;
-
-const stockCardData = [
-  {
-    discount: -25,
-    image: "Image_1.png",
-    info: "Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)",
-    price: 449,
-    lineThroughPrice: 499,
-  },
-  {
-    discount: -25,
-    image: "Image_2.png",
-    info: "Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная",
-    price: 495,
-    lineThroughPrice: 660,
-  },
-  {
-    discount: -25,
-    image: "Image_3.png",
-    info: `Сетка "Рабица" яч. 50х50/1,5х10 м-ОЦ`,
-    price: 1499,
-    lineThroughPrice: 1890,
-  },
-  {
-    discount: -25,
-    image: "Image_4.png",
-    info: "Металлочерепица, цвет коричневый, 1.18 х 1.15 м",
-    price: 769,
-    lineThroughPrice: 999,
-  },
-];
+import { stockCardData } from "./data/mainPage";
+import { StyledMain } from "./App.styles";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const cards = stockCardData.map((card) => {});
+  const cards = stockCardData.map(
+    ({ discount, image, info, price, lineThroughPrice }) => (
+      <Card
+        discount={discount}
+        image={image}
+        info={info}
+        price={price}
+        lineThroughPrice={lineThroughPrice}
+      />
+    )
+  );
   return (
     <div className="App">
-      <Header />
+      <header>
+        <Navbar />
+      </header>
       <Container>
         <StyledMain>
           <Slider>
@@ -131,12 +61,7 @@ function App() {
                 <img src="stock/right_arrow.svg" alt="" />
               </button>
             </div>
-            <div className="stock__bottom">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
+            <div className="stock__bottom">{cards}</div>
           </section>
           <section className="popular-categories"></section>
           <section className="popular-products"></section>
