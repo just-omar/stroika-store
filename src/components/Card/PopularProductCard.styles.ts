@@ -9,6 +9,7 @@ export const StyledPopularProductCard = styled.div`
   align-items: center;
 
   p {
+    margin-top: 16px;
     font-size: 16px;
     line-height: 150%;
     width: 246px;
@@ -19,6 +20,9 @@ export const StyledPopularProductCard = styled.div`
     font-size: 20px;
     line-height: 140%;
     color: #171b24;
+    width: 246px;
+    height: 28px;
+    margin-bottom: 16px;
   }
   button {
     width: 246px;
