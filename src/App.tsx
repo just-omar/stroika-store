@@ -15,8 +15,9 @@ import PopularProductCard from "./components/Card/PopularProductCard";
 
 function App() {
   const stockCards = stockCardData.map(
-    ({ discount, image, info, price, lineThroughPrice }) => (
+    ({ discount, image, info, price, lineThroughPrice }, idx) => (
       <StockCard
+        key={idx}
         discount={discount}
         image={image}
         info={info}
@@ -25,11 +26,11 @@ function App() {
       />
     )
   );
-  const categoryCards = popularCategories.map(({ image, name }) => (
-    <PopularCategoryCard name={name} imgName={image} />
+  const categoryCards = popularCategories.map(({ image, name }, idx) => (
+    <PopularCategoryCard key={idx} name={name} imgName={image} />
   ));
-  const productCards = popularProducts.map(({ img, name, price }) => (
-    <PopularProductCard image={img} product={name} price={price} />
+  const productCards = popularProducts.map(({ img, name, price }, idx) => (
+    <PopularProductCard key={idx} image={img} product={name} price={price} />
   ));
   return (
     <div className="App">
