@@ -5,6 +5,7 @@ import { Container } from "./GlobalStyle";
 import { stockCardData } from "./data/mainPage";
 import { StyledMain } from "./App.styles";
 import Navbar from "./components/Navbar/Navbar";
+import SectionTopBar from "./components/SectionTopBar/SectionTopBar";
 
 function App() {
   const cards = stockCardData.map(
@@ -53,18 +54,18 @@ function App() {
             </div>
           </Slider>
           <section className="stock">
-            <div className="stock__top">
-              <h2>Акции</h2>
-              <button>
-                <span>Все акции</span>
-                <img src="main-page/stock/right_arrow.svg" alt="" />
-              </button>
-            </div>
+            <SectionTopBar heading={"Акции"} />
             <div className="stock__bottom">{cards}</div>
           </section>
-          <section className="popular-categories"></section>
-          <section className="popular-products"></section>
-          <section className="popular-brands"></section>
+          <section className="popular-categories">
+            <SectionTopBar heading={"Популярные категории"} />
+          </section>
+          <section className="popular-products">
+            <SectionTopBar heading={"Популярные продукты"} />
+          </section>
+          <section className="popular-brands">
+            <SectionTopBar heading={"Популярные бренды"} />
+          </section>
           <section className="reviews"></section>
         </StyledMain>
       </Container>
