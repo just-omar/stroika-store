@@ -2,10 +2,6 @@ import styled from "styled-components";
 
 export const StyledPopularCategoryCard = styled.div`
   position: relative;
-  /* border: 1px solid black; */
-  * {
-    /* border: 1px solid black; */
-  }
   height: 180px;
   width: 180px;
   display: flex;

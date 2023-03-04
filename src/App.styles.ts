@@ -8,24 +8,17 @@ export const StyledMain = styled.main`
   flex-direction: column;
   margin-top: 40px;
   gap: 80px;
+  .section-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
   .stock {
-    &__bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
   }
   .popular-categories {
     height: 440px;
-    &__bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
   }
   .popular-products {
     height: 1344px;

@@ -2,11 +2,16 @@ import StockCard from "./components/Card/StockCard";
 
 import Slider from "./components/Slider/Slider";
 import { Container } from "./GlobalStyle";
-import { popularCategories, stockCardData } from "./data/mainPage";
+import {
+  popularCategories,
+  popularProducts,
+  stockCardData,
+} from "./data/mainPage";
 import { StyledMain } from "./App.styles";
 import Navbar from "./components/Navbar/Navbar";
 import SectionTopBar from "./components/SectionTopBar/SectionTopBar";
 import PopularCategoryCard from "./components/Card/PopularCategoryCard";
+import PopularProductCard from "./components/Card/PopularProductCard";
 
 function App() {
   const stockCards = stockCardData.map(
@@ -22,6 +27,9 @@ function App() {
   );
   const categoryCards = popularCategories.map(({ image, name }) => (
     <PopularCategoryCard name={name} imgName={image} />
+  ));
+  const productCards = popularProducts.map(({ img, name, price }) => (
+    <PopularProductCard image={img} product={name} price={price} />
   ));
   return (
     <div className="App">
@@ -59,17 +67,19 @@ function App() {
           </Slider>
           <section className="stock">
             <SectionTopBar heading={"Акции"} />
-            <div className="stock__bottom">{stockCards}</div>
+            <div className="section-bottom">{stockCards}</div>
           </section>
           <section className="popular-categories">
             <SectionTopBar heading={"Популярные категории"} />
-            <div className="popular-categories__bottom">{categoryCards}</div>
+            <div className="section-bottom">{categoryCards}</div>
           </section>
           <section className="popular-products">
             <SectionTopBar heading={"Популярные продукты"} />
+            <div className="section-bottom">{productCards}</div>
           </section>
           <section className="popular-brands">
             <SectionTopBar heading={"Популярные бренды"} />
+            <div className="section-bottom"></div>
           </section>
           <section className="reviews"></section>
         </StyledMain>
