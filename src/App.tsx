@@ -3,6 +3,7 @@ import StockCard from "./components/Card/StockCard";
 import Slider from "./components/Slider/Slider";
 import { Container } from "./GlobalStyle";
 import {
+  popularBrandImages,
   popularCategories,
   popularProducts,
   stockCardData,
@@ -31,6 +32,9 @@ function App() {
   ));
   const productCards = popularProducts.map(({ img, name, price }, idx) => (
     <PopularProductCard key={idx} image={img} product={name} price={price} />
+  ));
+  const brands = popularBrandImages.map((v, idx) => (
+    <img key={idx} className="brand" src={`main-page/brand/${v}`}></img>
   ));
   return (
     <div className="App">
@@ -80,7 +84,7 @@ function App() {
           </section>
           <section className="popular-brands">
             <SectionTopBar heading={"Популярные бренды"} />
-            <div className="section-bottom"></div>
+            <div className="section-bottom">{brands}</div>
           </section>
           <section className="reviews"></section>
         </StyledMain>

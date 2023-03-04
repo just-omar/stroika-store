@@ -25,5 +25,10 @@ export const StyledMain = styled.main`
   }
   .popular-brands {
     height: 328px;
+    .brand {
+      width: 180px;
+      height: 124px;
+      border: 1px solid #e8e9ea;
+    }
   }
 `;
