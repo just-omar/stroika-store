@@ -19,6 +19,13 @@ export const StyledMain = styled.main`
   }
   .popular-categories {
     height: 440px;
+    &__bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
   }
   .popular-products {
     height: 1344px;

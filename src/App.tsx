@@ -2,13 +2,14 @@ import StockCard from "./components/Card/StockCard";
 
 import Slider from "./components/Slider/Slider";
 import { Container } from "./GlobalStyle";
-import { stockCardData } from "./data/mainPage";
+import { popularCategories, stockCardData } from "./data/mainPage";
 import { StyledMain } from "./App.styles";
 import Navbar from "./components/Navbar/Navbar";
 import SectionTopBar from "./components/SectionTopBar/SectionTopBar";
+import PopularCategoryCard from "./components/Card/PopularCategoryCard";
 
 function App() {
-  const cards = stockCardData.map(
+  const stockCards = stockCardData.map(
     ({ discount, image, info, price, lineThroughPrice }) => (
       <StockCard
         discount={discount}
@@ -19,6 +20,9 @@ function App() {
       />
     )
   );
+  const categoryCards = popularCategories.map(({ image, name }) => (
+    <PopularCategoryCard name={name} imgName={image} />
+  ));
   return (
     <div className="App">
       <header>
@@ -55,10 +59,11 @@ function App() {
           </Slider>
           <section className="stock">
             <SectionTopBar heading={"Акции"} />
-            <div className="stock__bottom">{cards}</div>
+            <div className="stock__bottom">{stockCards}</div>
           </section>
           <section className="popular-categories">
             <SectionTopBar heading={"Популярные категории"} />
+            <div className="popular-categories__bottom">{categoryCards}</div>
           </section>
           <section className="popular-products">
             <SectionTopBar heading={"Популярные продукты"} />

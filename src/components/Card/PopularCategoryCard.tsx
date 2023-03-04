@@ -1,13 +1,17 @@
 import React from "react";
-import { StyledCategoryCard } from "./PopularCategoryCard.styles";
+import { StyledPopularCategoryCard } from "./PopularCategoryCard.styles";
 
-type Props = {};
+type Props = {
+  name: string;
+  imgName: string;
+};
 
-const PopularCategoryCard = (props: Props) => {
+const PopularCategoryCard = ({ name, imgName }: Props) => {
   return (
-    <StyledCategoryCard>
-      <div>Душевые</div>
-    </StyledCategoryCard>
+    <StyledPopularCategoryCard>
+      <span>{name}</span>
+      <img src={`main-page/category/${imgName}.png`} alt="" />
+    </StyledPopularCategoryCard>
   );
 };
 
