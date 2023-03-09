@@ -70,15 +70,15 @@ function App() {
               </div>
             </div>
           </Slider>
-          <section className="stock">
+          <section>
             <SectionTopBar heading={"Акции"} />
             <div className="section-bottom">{stockCards}</div>
           </section>
-          <section className="popular-categories">
+          <section>
             <SectionTopBar heading={"Популярные категории"} />
             <div className="section-bottom">{categoryCards}</div>
           </section>
-          <section className="popular-products">
+          <section>
             <SectionTopBar heading={"Популярные продукты"} />
             <div className="section-bottom">{productCards}</div>
           </section>

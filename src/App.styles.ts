@@ -15,16 +15,8 @@ export const StyledMain = styled.main`
     justify-content: center;
     gap: 16px;
   }
-  .stock {
-  }
-  .popular-categories {
-    height: 440px;
-  }
-  .popular-products {
-    height: 1344px;
-  }
+
   .popular-brands {
-    height: 328px;
     .brand {
       width: 180px;
       height: 124px;
