@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SectionTopBar from "./components/SectionTopBar/SectionTopBar";
 import PopularCategoryCard from "./components/Card/PopularCategoryCard";
 import PopularProductCard from "./components/Card/PopularProductCard";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
   const stockCards = stockCardData.map(
@@ -79,10 +80,11 @@ function App() {
             <div className="section-bottom">{productCards}</div>
           </section>
           <section className="popular-brands">
-            <SectionTopBar heading={"Популярные бренды"} />
             <div className="section-bottom"></div>
           </section>
-          <section className="reviews"></section>
+          <section className="reviews">
+            <Reviews />
+          </section>
         </StyledMain>
       </Container>
     </div>
