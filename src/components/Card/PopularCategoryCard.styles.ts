@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledPopularCategoryCard = styled.div`
+export const StyledCategoryCard = styled.div`
   position: relative;
   height: 180px;
   width: 180px;

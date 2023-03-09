@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledPopularCategoryCard } from "./PopularCategoryCard.styles";
+import { StyledCategoryCard } from "./PopularCategoryCard.styles";
 
 type Props = {
   name: string;
@@ -8,10 +8,10 @@ type Props = {
 
 const PopularCategoryCard = ({ name, imgName }: Props) => {
   return (
-    <StyledPopularCategoryCard>
+    <StyledCategoryCard>
       <span>{name}</span>
       <img src={`main-page/category/${imgName}.png`} alt="" />
-    </StyledPopularCategoryCard>
+    </StyledCategoryCard>
   );
 };
 
