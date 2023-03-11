@@ -6,6 +6,7 @@ import {
   popularBrandImages,
   popularCategories,
   popularProducts,
+  reviewsData,
   stockCardData,
 } from "./data/mainPage";
 import { StyledMain } from "./App.styles";
@@ -13,7 +14,8 @@ import Navbar from "./components/Navbar/Navbar";
 import SectionTopBar from "./components/SectionTopBar/SectionTopBar";
 import PopularCategoryCard from "./components/Card/PopularCategoryCard";
 import PopularProductCard from "./components/Card/PopularProductCard";
-import Reviews from "./components/Reviews/Reviews";
+import Review from "./components/Review/Review";
+import { Arrows, Bottom, Top } from "./components/Review/Review.styles";
 
 function App() {
   const stockCards = stockCardData.map(
@@ -37,6 +39,16 @@ function App() {
   const brands = popularBrandImages.map((v, idx) => (
     <img key={idx} className="brand" src={`main-page/brand/${v}`}></img>
   ));
+
+  const reviews = reviewsData.map(({ personImg, person_name, text, date }) => (
+    <Review
+      personImg={personImg}
+      person_name={person_name}
+      text={text}
+      date={date}
+    />
+  ));
+
   return (
     <div className="App">
       <header>
@@ -88,7 +100,14 @@ function App() {
             <div className="section-bottom">{brands}</div>
           </section>
           <section className="reviews">
-            <Reviews />
+            <Top>
+              <span>Отзывы</span>
+              <Arrows>
+                <img src="./main-page/slider/slider_left_arrow.svg" alt="" />
+                <img src="./main-page/slider/slider_right_arrow.svg" alt="" />
+              </Arrows>
+            </Top>
+            <Bottom>{reviews}</Bottom>
           </section>
         </StyledMain>
       </Container>

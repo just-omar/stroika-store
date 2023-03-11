@@ -29,7 +29,7 @@ export const StyledPopularProductCard = styled.div`
     height: 48px;
 
     /* Main/FDF074 */
-
+    border: none;
     background: #fcec41;
     span {
       font-weight: 500;
