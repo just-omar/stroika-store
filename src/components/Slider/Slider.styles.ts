@@ -4,11 +4,7 @@ export const StyledSlider = styled.div`
   /* position: absolute; */
   display: flex;
   justify-content: center;
-  /* border: 3px dashed green; */
-  * {
-    /* border: 2px solid magenta;
-    padding: 5px; */
-  }
+
   .main-container {
     position: relative;
 
@@ -51,10 +47,6 @@ export const StyledSlider = styled.div`
     user-select: none;
 
     .info {
-      /* border: 3px solid black; */
-      * {
-        /* border: 1px solid black; */
-      }
       height: 340px;
       width: 570px;
       margin-left: 100px;

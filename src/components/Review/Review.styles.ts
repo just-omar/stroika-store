@@ -22,14 +22,23 @@ export const Arrows = styled.div`
 `;
 
 export const Bottom = styled.div`
-  /* display: flex; */
+  display: flex;
   gap: 16px;
+  position: absolute;
+`;
+export const BottomWrapper = styled.div`
+  position: relative;
+  height: 365px;
+  width: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+  background-color: aliceblue;
 `;
 export const ReviewCard = styled.div`
-  display: inline-block;
-  border: 1px dashed black;
   padding: 24px;
   width: 376px;
+  background-color: #ffffff;
+
   .top {
     display: flex;
     align-items: center;
@@ -45,7 +54,12 @@ export const ReviewCard = styled.div`
   }
   .text {
     margin-top: 12px;
+    margin-bottom: 15px;
     font-size: 16px;
     line-height: 24px;
+  }
+  .date {
+    color: #8b8d92;
+    font-size: 15px;
   }
 `;

@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
-  * {
-    /* border: 1px solid black; */
-  }
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -25,9 +22,9 @@ export const StyledMain = styled.main`
   }
   .reviews {
     border: 1px solid black;
-    height: 593px;
     margin-bottom: 20rem;
     background-color: #f6f6f6;
     padding: 80px 0;
+    position: relative;
   }
 `;
