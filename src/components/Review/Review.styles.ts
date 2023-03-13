@@ -25,6 +25,11 @@ export const Bottom = styled.div`
   display: flex;
   gap: 16px;
   position: absolute;
+
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 `;
 export const BottomWrapper = styled.div`
   position: relative;
@@ -32,7 +37,6 @@ export const BottomWrapper = styled.div`
   width: 100%;
   border: 1px solid black;
   overflow: hidden;
-  background-color: aliceblue;
 `;
 export const ReviewCard = styled.div`
   padding: 24px;

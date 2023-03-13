@@ -21,6 +21,7 @@ import {
   BottomWrapper,
   Top,
 } from "./components/Review/Review.styles";
+import ReviewSlider from "./components/Slider/ReviewSlider";
 
 function App() {
   const stockCards = stockCardData.map(
@@ -43,15 +44,6 @@ function App() {
   ));
   const brands = popularBrandImages.map((v, idx) => (
     <img key={idx} className="brand" src={`main-page/brand/${v}`}></img>
-  ));
-
-  const reviews = reviewsData.map(({ personImg, person_name, text, date }) => (
-    <Review
-      personImg={personImg}
-      person_name={person_name}
-      text={text}
-      date={date}
-    />
   ));
 
   return (
@@ -106,22 +98,7 @@ function App() {
           </section>
         </Container>
 
-        <section className="reviews">
-          <Container>
-            <Top>
-              <span>Отзывы</span>
-              <Arrows>
-                <img src="./main-page/slider/slider_left_arrow.svg" alt="" />
-                <img src="./main-page/slider/slider_right_arrow.svg" alt="" />
-              </Arrows>
-            </Top>
-          </Container>
-          <Container>
-            <BottomWrapper>
-              <Bottom>{reviews}</Bottom>
-            </BottomWrapper>
-          </Container>
-        </section>
+        <ReviewSlider />
       </StyledMain>
     </div>
   );
