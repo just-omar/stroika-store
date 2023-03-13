@@ -1,6 +1,5 @@
 import React, { Children, cloneElement, useEffect, useState } from "react";
 import { StyledSlider } from "./Slider.styles";
-import leftArrow from "../../assets/slider_left_arrow.svg";
 
 type Props = {
   children: React.ReactNode;
@@ -50,10 +49,10 @@ const Slider = ({ children }: Props) => {
         </div>
         <div className="arrows">
           <button onClick={handleLeftArrowClick}>
-            <img src="slider/slider_left_arrow.svg" alt="" />
+            <img src="main-page/slider/slider_left_arrow.svg" alt="" />
           </button>
           <button onClick={handleRightArrowClick}>
-            <img src="slider/slider_right_arrow.svg" alt="" />
+            <img src="main-page/slider/slider_right_arrow.svg" alt="" />
           </button>
         </div>
       </div>
