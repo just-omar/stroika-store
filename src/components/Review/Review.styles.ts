@@ -26,16 +26,13 @@ export const Bottom = styled.div`
   gap: 16px;
   position: absolute;
 
-  transition: translate;
-  transition-property: transform;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
   transition-timing-function: ease-in-out;
 `;
 export const BottomWrapper = styled.div`
   position: relative;
   height: 365px;
   width: 100%;
-  border: 1px solid black;
   overflow: hidden;
 `;
 export const ReviewCard = styled.div`

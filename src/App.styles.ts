@@ -21,7 +21,6 @@ export const StyledMain = styled.main`
     }
   }
   .reviews {
-    border: 1px solid black;
     margin-bottom: 20rem;
     background-color: #f6f6f6;
     padding: 80px 0;
