@@ -21,9 +21,34 @@ export const StyledMain = styled.main`
     }
   }
   .reviews {
-    margin-bottom: 20rem;
     background-color: #f6f6f6;
     padding: 80px 0;
-    position: relative;
+  }
+
+  /* margin-bottom: 20rem; */
+`;
+export const AboutCompany = styled.section`
+  height: 456px;
+  width: 1360px;
+  background-image: url("./main-page/about-company-image.png");
+  background-repeat: no-repeat;
+  margin: 40px -100px;
+  position: relative;
+  .info {
+    width: 670px;
+
+    color: #2f323a;
+    position: absolute;
+    top: 88px;
+    left: 198px;
+    h2 {
+      font-weight: 600;
+      font-size: 34px;
+    }
+    p {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 16px;
+    }
   }
 `;
