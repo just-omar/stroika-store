@@ -22,6 +22,7 @@ import {
   Top,
 } from "./components/Review/Review.styles";
 import ReviewSlider from "./components/Slider/ReviewSlider";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const stockCards = stockCardData.map(
@@ -119,6 +120,7 @@ function App() {
           </div>
         </AboutCompany>
       </Container>
+      <Footer />
     </div>
   );
 }

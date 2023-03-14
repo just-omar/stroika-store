@@ -32,9 +32,8 @@ export const AboutCompany = styled.section`
   width: 1360px;
   background-image: url("./main-page/about-company-image.png");
   background-repeat: no-repeat;
-  margin: 0 -100px;
+  margin: 40px -100px;
   position: relative;
-  margin-top: 40px;
   .info {
     width: 670px;
 
